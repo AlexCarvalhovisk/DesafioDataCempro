@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Produtos</h2>
+  @if (isAdmin) {
+    <button (click)="logout()">Logout</button>
+  }
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Valor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--
+      Nova sintaxe de loop, sem colchetes.
+      É obrigatório usar o "track" para otimização.
+    -->
+      @for (produto of produtos; track produto.id) {
+        <tr>
+          <td>{{ produto.nome }}</td>
+          <td>{{ produto.valor | currency }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

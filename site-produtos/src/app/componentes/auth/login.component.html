@@ -1,0 +1,56 @@
+<body>
+<div class="auth-container">
+  <h2>@if (isLoginMode) {
+    Login
+  } @else {
+    Cadastro
+  }</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    @if (!isLoginMode) {
+      <div>
+        <label for="name">Nome:</label>
+        <input id="name" formControlName="username">
+        @if (form.get('nome')?.invalid && form.get('nome')?.touched) {
+          <small class="error">Nome é obrigatório.</small>
+        }
+      </div>
+    }
+
+    <div>
+      <label for="email">E-mail:</label>
+      <input id="email" type="email" formControlName="email">
+      @if (form.get('email')?.invalid && form.get('email')?.touched) {
+        <small class="error">E-mail inválido ou obrigatório.</small>
+      }
+
+      <label for="password">Senha:</label>
+      <input id="password" type="password" formControlName="password"
+             [placeholder]="isLoginMode ? '' : 'Informe ao menos 4 dígitos'">
+      @if (form.get('password')?.errors?.['minlength'] && form.get('password')?.touched) {
+        <small class="error">A senha deve ter ao menos 4 caracteres.</small>
+      }
+      @if (form.get('password')?.errors?.['required'] && form.get('password')?.touched) {
+        <small class="error">Senha é obrigatória.</small>
+      }
+
+      <button type="submit">
+        @if (isLoginMode) {
+          Entrar
+        } @else {
+          Cadastrar
+        }
+      </button>
+    </div>
+  </form>
+
+  <p>
+    @if (isLoginMode) {
+      <button type="button" (click)="toggleMode()">Criar conta</button>
+    } @else {
+      <button type="button" (click)="toggleMode()">Fazer login</button>
+    }
+  </p>
+</div>
+</body>
+

@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  height: 100vh; /*Aqui pego toda página*/
+  display: flex;
+  align-items: center; /*Aqui alinho tudo na altura mediana da página*/
+  justify-content: center; /*Aqui ponho o conteúdo no centro da tela*/
+}
+
+.auth-container {
+  max-width: 500px; /*Aqui já diminui todos os conteúdos que estão dentro do container*/
+  margin: auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.521);
+}
+
+input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border-color: #8aadad;
+  border: inset;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1rem;
+  border: inset;
+  border-radius: 4px;
+  color: #000000;
+  background-color: #daf1f1;
+  box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.33);
+  padding: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #eff5f5;
+}
+
+label option {
+  align-items: revert;
+}
+
+.perfil-container {
+  display: inline;
+  align-items: revert;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
