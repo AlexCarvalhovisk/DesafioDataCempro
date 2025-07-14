@@ -28,5 +28,8 @@
 
 ### Login e Senha para usuário normal: Login: User, Senha: 125User
 
+<img width="533" height="318" alt="image" src="https://github.com/user-attachments/assets/6d080205-37e8-47d0-84e6-99d39172a575" />
+
+
 
 
