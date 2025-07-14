@@ -4,7 +4,7 @@
     <button (click)="logout()">Logout</button>
   }
 
-  <table>
+  <table class="table table-striped">
     <thead>
     <tr>
       <th>Nome</th>
@@ -12,10 +12,7 @@
     </tr>
     </thead>
     <tbody>
-    <!--
-      Nova sintaxe de loop, sem colchetes.
-      É obrigatório usar o "track" para otimização.
-    -->
+    <!--Nova sintaxe de loop, sem colchetes. É obrigatório usar o "track" para otimização. -->
       @for (produto of produtos; track produto.id) {
         <tr>
           <td>{{ produto.nome }}</td>
