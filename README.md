@@ -28,10 +28,9 @@
 
 ### Login e Senha para usuário normal: Login: User, Senha: 125User
 
-### Ao acessar a aplicação através da autenticação você será redirecionado para home do projeto e verá a tabela de produtos.
-
 <img width="1312" height="715" alt="image" src="https://github.com/user-attachments/assets/c2069516-1b47-425a-a605-255c07db4c53" />
 
+### Ao acessar a aplicação através da autenticação você será redirecionado para home do projeto e verá a tabela de produtos.
 
 <img width="533" height="318" alt="image" src="https://github.com/user-attachments/assets/6d080205-37e8-47d0-84e6-99d39172a575" />
 
